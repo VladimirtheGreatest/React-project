@@ -1,5 +1,4 @@
 import React from "react"
-import ReactDOM from "react-dom"
 
 function MyInfo() {
   return (
@@ -15,7 +14,4 @@ function MyInfo() {
   )
 }
 
-ReactDOM.render(
-  <MyInfo />,
-  document.getElementById("root")
-)
+export default MyInfo
