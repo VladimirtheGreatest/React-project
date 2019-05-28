@@ -1,17 +1,21 @@
 import React from "react"
 import ReactDOM from "react-dom"
 
-function MyApp() {
+function MyInfo() {
   return (
+    <div>
+    <h1>Vladimir</h1>
+    <p>This is a functional component practice</p>
     <ul>
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
+      <li>Home</li>
+      <li>About</li>
+      <li>Navigation</li>
     </ul>
+    </div>
   )
 }
 
 ReactDOM.render(
-  <MyApp />,
+  <MyInfo />,
   document.getElementById("root")
 )
