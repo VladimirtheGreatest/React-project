@@ -1,25 +1,20 @@
+/*
+Let's practice props and mapping components on our todo list app!
+
+I've created a js file with some todos data in it, which I'm imported into this file. (Normally this data would come from an API call, not a local file). 
+
+Challenge: Using the array map method, i will render a child component for each todo item in the todosData array and pass the relevant data to it.
+*/
+
 import React from "react"
-import ContactCard from "./ContactCard"
+import TodoItem from "./TodoItem"
+import todosData from "./todosData"
 
 function App() {
+    const dataitem = todosData.map(x => <TodoItem  key ={x.id} x ={x}/>);
     return (
-        <div className="contacts">
-            <ContactCard 
-                contact={{name: "Mr. Whiskerson", imgUrl: "http://placekitten.com/300/200", phone: "(212) 555-1234", email: "mr.whiskaz@catnap.meow"}}
-            />
-            
-            <ContactCard 
-                contact={{name: "Fluffykins", imgUrl: "http://placekitten.com/400/200", phone: "(212) 555-2345", email: "fluff@me.com"}}
-            />
-            
-            <ContactCard
-                contact={{name: "Destroyer", imgUrl: "http://placekitten.com/400/300", phone: "(212) 555-3456", email: "ofworlds@yahoo.com"}}
-            />
-            
-            <ContactCard 
-                contact={{name: "Felix", imgUrl: "http://placekitten.com/200/100", phone: "(212) 555-4567", email: "thecat@hotmail.com"}}
-            />
-            
+        <div className="todo-list">
+           {dataitem}
         </div>
     )
 }
